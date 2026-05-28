@@ -1,0 +1,112 @@
+1. Install Python and write the steps of installation and understand difference between 
+scripting and interactive modes in IDLE. 
+
+2. Create a variable to store your age and print its type using type(). 
+age = 20
+print(age)
+print(type(age))
+
+3. Declare a string variable called x and assign it the value “Hello”. 
+a. Print out the value of x
+x = "Hello"
+print(x)
+
+4.4. Take different data types and print values using print function. 
+a = 10
+b = 3.5
+c = "Python"
+d = True
+
+print(a)
+print(b)
+print(c)
+print(d)
+
+ 
+5. Declare these variables (x, y and z) as integers. Assign a value of 9 to x, Assign a value 
+of 7 to y, perform addition, multiplication, division and subtraction on these two variables 
+and Print out the result. 
+x = 9
+y = 7
+
+print("Addition:", x + y)
+print("Multiplication:", x * y)
+print("Division:", x / y)
+print("Subtraction:", x - y)
+
+6. Write a program to compute the length of the hypotenuse (c) of a right triangle using 
+Pythagoras theorem.  
+a = float(input("Enter base: "))
+b = float(input("Enter height: "))
+
+c = (a**2 + b**2) ** 0.5
+print("Hypotenuse:", c)
+
+
+7. Write a program to find simple interest. 
+p = float(input("Enter principal: "))
+r = float(input("Enter rate: "))
+t = float(input("Enter time: "))
+
+si = (p * r * t) / 100
+print("Simple Interest:", si)
+
+8. Write a program to find area of triangle when length of sides are given. 
+a = float(input("Enter side a: "))
+b = float(input("Enter side b: "))
+c = float(input("Enter side c: "))
+
+s = (a + b + c) / 2
+area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+
+print("Area of triangle:", area)
+
+9. Write a program to convert given seconds into hours, minutes and remaining seconds. 
+sec = int(input("Enter seconds: "))
+
+hours = sec // 3600
+minutes = (sec % 3600) // 60
+seconds = sec % 60
+
+print("Hours:", hours)
+print("Minutes:", minutes)
+print("Seconds:", seconds)
+
+10. Write a program to swap two numbers without taking additional variable.
+a = int(input("Enter a: "))
+b = int(input("Enter b: "))
+
+a, b = b, a
+
+print("After swapping:")
+print("a =", a)
+print("b =", b)
+
+11. Write a program to find sum of first n natural numbers. 
+n = int(input("Enter n: "))
+sum = n * (n + 1) // 2
+print("Sum:", sum)
+
+12. Write a program to print truth table for bitwise operators (&, | and ^ operators) 
+print("A B A&B A|B A^B")
+for a in [0, 1]:
+   for b in [0, 1]:
+        print(a, b, a & b, a | b, a ^ b)
+
+13. Write a program to find left shift and right shift values of a given number. 
+n = int(input("Enter number: "))
+
+print("Left shift:", n << 1)
+print("Right shift:", n >> 1)
+
+14. Using membership operator find whether a given number is in sequence 
+(10,20,56,78,89)
+num = int(input("Enter number: "))
+seq = (10, 20, 56, 78, 89)
+
+if num in seq:
+    print("Number is in sequence")
+else:
+    print("Number is not in sequence")
+
+
