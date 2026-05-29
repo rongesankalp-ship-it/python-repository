@@ -1,0 +1,216 @@
+1. Check whether the given number is divisible by 3 and 5 both.
+ANS
+n = int(input("Enter a number: "))
+
+if n % 3 == 0 and n % 5 == 0:
+    print("Divisible by both 3 and 5")
+elif n % 3 == 0:
+    print("Divisible by 3")
+elif n % 5 == 0:
+    print("Divisible by 5")
+else:
+    print("Not divisible by 3 or 5")
+
+    
+#q2. Check whether a given number is multiple of five or not.
+n=int(input("Enter a number: "))
+
+if n % 5 == 0:
+    print("Multiple of 5")
+else:
+    print("Not a multiple of 5")
+
+
+#q33. Find the greatest among the two numbers. If numbers are equal than print “numbers are 
+equal”. 
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+if a > b:
+      print("Greatest number is:",a)
+elif b > a:
+    print("Greatest number is:",b)
+else:
+    print("Numbers are equal")
+
+#q44. Find the greatest among three numbers assuming no two values are same.  
+a = int(input("Enter first number"))
+b = int(input("Enter second number"))
+c = int(input("Enter third number"))
+
+if a > b and a >c:
+    print("greatest number is: ",a)
+elif b > a and b > c:
+    print("greatest number is: ",b)
+else:
+    print("greatest number is: ",c)
+
+#q5 Check whether the quadratic equation has real roots or imaginary roots. Display the 
+roots. 
+import math
+a = int(input("Enter a: "))
+b = int(input("Enter b: "))
+c = int(input("Enter c: "))
+
+d = b*b - 4*a*c
+
+if d > 0:
+    r1 = (-b + math.sqrt(d)) / (2*a)
+    r2 = (-b - math.sqrt(d)) / (2*a)
+    print("Roots are real and different")
+    print("Root1:",r1)
+    print("Root2:",r2)
+elif d == 0:
+    r = -b / (2*a)
+    print("Roots are real and equal")
+    print("Root:",r)
+else:
+    print("Roots are imaginary")
+
+
+#q66. Find whether a given year is a leap year or not.
+year = int(input("Enter the year:"))
+if (year% 400 ==0)or(year%4==0 and year%100 !=0):
+   print("this is a leap year")
+else:
+    print("this is not a leap year")
+    
+
+
+#q7Write a program which takes any date as input and display next date of the calendar 
+e.g. 
+I/P: day=20 month=9 year=2005  
+O/P: day=21 month=9 year 2005
+ 
+
+day = int(input("Enter day: "))
+month = int(input("Enter month: "))
+year = int(input("Enter year: "))
+
+
+days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+#Check for leap year
+if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+    days_in_month[1] = 29   # February has 29 days in leap year
+
+
+day = day + 1
+
+
+if day > days_in_month[month - 1]:
+    day = 1
+    month = month + 1
+
+
+if month > 12:
+    month = 1
+    year = year + 1
+
+print("Next Date is:")
+print("Day =", day)
+print("Month =", month)
+print("Year =", year)
+
+
+ 
+
+ ###Q88. Print the grade sheet of a student for the given range of cgpa. Scan marks of five 
+subjects and calculate the percentage. 
+CGPA=percentage/10 
+CGPA range: 
+0 to 3.4 -> F 
+3.5 to 5.0->C+ 
+5.1 to 6->B 
+6.1 to 7-> B+ 
+7.1 to 8-> A 
+8.1 to 9->A+ 
+9.1 to 10-> O (Outstanding) 
+Sample Gradesheet 
+Name: Rohit Sharma 
+Roll Number: R17234512   SAPID: 50005673 
+Sem: 1      Course: B.Tech. CSE AI&ML 
+ 
+Subject name: Marks 
+PDS:   70 
+Python:  80 
+ 
+Chemistry:  90 
+English:  60 
+Physics:  50 
+Percentage: 70% 
+CGPA:7.0 
+Grade:   
+name = input("Enter Name:")
+sapid = input("Enter sap id:")
+sem = input ("Enter semester:")
+course = input("Enter course:")
+
+m1 = float(input("Enter marks of subject 1 : "))
+c1 = int(input("Enter credit of subject 1: "))
+g1 = input ("Enter grade of subject of 1:")
+
+m2 = float(input("Enter marks of subject 2: "))
+c2 = int(input("Enter credit of subject 2: "))
+g2 = input("Enter grade of subject 2: ")
+
+m3 = float(input("Enter marks of subject 3: "))
+c3 = int(input("Enter credit of subjedct 3: "))
+g3 = input("Enter grade of subject 3: ")
+
+m4 = float(input ("Enter marks of subject 4: "))
+c4 = int(input("Enter credit of subject 4: "))
+g4 = input("Enter grade of subject 4: ")
+
+m5 = float(input("Enter marks of subject 5: "))
+c5 = int(input("Enter credit of subject 5:" ))
+g5 = input("Enter grade of subject 5: ")
+
+m6 = float(input("Enter marks of subject 6: "))
+c6 = int(input("Enter credit of subject 6: "))
+g6 = input("Enter grade of subject 6:")
+
+total = m1 + m2 +m3 + m4 + m5 + m6
+percentage = total / 6
+cgpa = percentage / 10
+
+if cgpa <= 3.4:
+     final_grade = "F"
+elif cgpa <= 5.0:
+     final_grade = "C+"
+elif cgpa <= 6.0:
+     final_grade = "B"
+elif cgpa <= 7.0:
+     final_grade = "B+"
+elif cgpa <= 8.0:
+     final_grade = "A"
+elif cgpa <= 9.0:
+     final_grade = "A+"
+else:
+     final_grade = "O (Outstanding)"
+
+print("\n==============GRADE SHEET ============")
+print("Name:", name)
+print("SAP ID:",sapid)
+print("Semester:",sem)
+print("Course:", course)
+print("\n------------------------------------------------")
+print("Subject | Marks | Credit | Grade")
+print("--------------------------------------------------------")
+print("Sub1      |", m1, "|", c1, "|",g1)
+print("Sub2      |", m2, "|", c2, "|",g2)
+print("Sub3      |", m3, "|", c3, "|",g3)
+print("sub4      |", m4, "|", c4, "|",g4)
+print("Sub5      |", m5, "|", c5, "|",g5)
+print("Sub6      |", m6, "|", c6, "|",g6)
+print("-------------------------------------------------------")
+
+print("Percentage:", percentage, "%")
+print("CGPA:", cgpa)
+print("Grade:",final_grade)
+print("===========================================================")
+                
+ 
+ 
+    
+      
